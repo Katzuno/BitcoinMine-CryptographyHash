@@ -4,7 +4,7 @@ import random
 ver = 0x20400000
 prev_block = "00000000000000000006a4a234288a44e715275f1775b77b2fddb6c02eb6b72f"
 mrkl_root = "2dc60c563da5368e0668b81bc4d8dd369639a1134f68e425a9a74e428801e5b8"
-time_ = 0x5DB8AB5E  # 2014-02-20 04:57:25
+time_ = 0x5DB8AB5E
 bits = 0x17148EDF
 
 # https://en.bitcoin.it/wiki/Difficulty
