@@ -19,22 +19,22 @@ if case == 1:
     nonce1 = 3000000000
     hash = None
     i = 1
-    print ('Primele 5 valori hash:')
+    print('Primele 5 valori hash:')
     while nonce1 < 3100000000:
         header = (struct.pack("<L", ver) + codecs.decode(prev_block, "hex")[::-1] +
                   codecs.decode(mrkl_root, "hex")[::-1] + struct.pack("<LLL", time_, bits, nonce1))
         hash = hashlib.sha256(hashlib.sha256(header).digest()).digest()
-        #print(nonce1, codecs.encode(hash[::-1], "hex"))
-        if i <=5:
+        # print(nonce1, codecs.encode(hash[::-1], "hex"))
+        if i <= 5:
             print(i, ': ', codecs.encode(hash[::-1], "hex"))
-            i=i+1
+            i = i + 1
 
         if hash[::-1] < target_str:
             print('success')
             print(nonce1, codecs.encode(hash[::-1], "hex"))
             break
         nonce1 += 1
-#3060331851
+# 3060331851
 elif case == 2:
     nonce2 = random.randint(3060331852 + 1, 3100000000)
     nr_testari = 1
@@ -50,8 +50,6 @@ elif case == 2:
             break
         nonce2 += 1
         nr_testari += 1
-
-
 
 """:arg
 Cazul 1:
